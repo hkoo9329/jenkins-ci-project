@@ -1,13 +1,10 @@
 package com.jenkins.ci.project;
 
-/**
- * Hello world!
- *
- */
-public class App 
+
+public class Calculator
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+     // 코드 작성란
     }
 }
