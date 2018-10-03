@@ -8,12 +8,20 @@ public class mainInput {
     public static void main(String[] args) throws CalException {
         // TODO Auto-generated method stub
         Scanner in = new Scanner(System.in);
+        System.out.println("정수 계산기 종료: exit 입력");
 
-        String data;
-        data = in.nextLine();
-        Calculator cal = new Calculator(infixToPostfix(data));
+        while (true){
+            String data;
+            data = in.nextLine();
+            if(data.equals("exit")){
+                break;
+            }
+            Calculator cal = new Calculator(infixToPostfix(data));
+            System.out.println(cal.getOutput());
+        }
 
-        System.out.println(cal.getOutput());
+
+
 
     }
     private static int getWeight(char op){
