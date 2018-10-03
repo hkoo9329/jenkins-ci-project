@@ -4,5 +4,3 @@
 
 Convert to postfix formula and modify to calculation 
 
-add exit
-
