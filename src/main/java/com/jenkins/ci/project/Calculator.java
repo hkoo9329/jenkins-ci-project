@@ -1,10 +1,8 @@
 package com.jenkins.ci.project;
 
-import lombok.Data;
 import java.util.Stack;
 
-@Data
-
+@D
 public class Calculator{
 
 
