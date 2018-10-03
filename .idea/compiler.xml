@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="jenkins-ci-project" />
+        <module name="SimpleCalculator" />
       </profile>
     </annotationProcessing>
   </component>
