@@ -1,26 +1,82 @@
 package com.jenkins.ci.project;
-import java.util.Scanner;
-public class main {
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		 Scanner in = new Scanner(System.in);
-		
-		 int x;
-		 int y;
-		 x=in.nextInt();
-		 y=in.nextInt();
-		 
-		System.out.println(x+y);
-		
+
+import lombok.Data;
+import java.util.Stack;
+
+@Data
+
+public class Calculator{
+
+
+
+	private String output= "";
+	private String input = "";
+
+	public Calculator(String data) throws CalException {
+		setInput(data);
+		Calculation();
 	}
+
+
+	public void Calculation() throws CalException{
+		Stack<Float> st = new Stack<Float>();
+		char[] temp = input.toCharArray();
+		float x,y,result;
+		for(int i=0;i<temp.length;i++){
+
+			switch (temp[i]){
+				case '+':
+					x=st.pop();
+					y=st.pop();
+					result = x+y;
+					st.push(result);
+					break;
+				case '-':
+					x=st.pop();
+					y=st.pop();
+					result = x-y;
+					st.push(result);
+					break;
+				case '*':
+					x=st.pop();
+					y=st.pop();
+					result = x*y;
+					st.push(result);
+					break;
+				case '/':
+					x=st.pop();
+					y=st.pop();
+					result = x/y;
+					st.push(result);
+					break;
+				default:
+					st.push(Float.parseFloat(String.valueOf(temp[i])));
+					break;
+			}
+		}
+
+		if (st.size() > 1) {
+			throw (new CalException("수식이 잘못 되었습니다."));
+		}
+		else
+			setOutput(String.valueOf(st.pop()));
+
+
+
+
+	}
+
+
+
+		
+
 	
 
 }
 
-<<<<<<< HEAD
+class CalException extends Exception{
 
-
-
-
-=======
->>>>>>> b18de4667d81d95618b411261a5e5e76d2991ad3
+	public CalException(String message){
+		super(message);
+	}
+}
