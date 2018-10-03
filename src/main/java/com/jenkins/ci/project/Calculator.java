@@ -6,9 +6,6 @@ import java.util.Stack;
 
 @Data
 public class Calculator{
-
-
-
 	private String output= "";
 	private String input = "";
 

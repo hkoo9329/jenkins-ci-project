@@ -2,7 +2,6 @@ package com.jenkins.ci.project;
 
 import java.util.Scanner;
 import java.util.Stack;
-import java.util.regex.Pattern;
 
 public class mainInput {
 
