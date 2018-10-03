@@ -9,17 +9,14 @@ public class mainInput {
         // TODO Auto-generated method stub
         Scanner in = new Scanner(System.in);
         System.out.println("정수 계산기  종료: exit 입력");
-
         while (true) {
             String data;
             data = in.nextLine();
-            if(data.equals("exit")){
+            if (data.equals("exit")) {
                 break;
             }
             Calculator cal = new Calculator(infixToPostfix(data));
             System.out.println(cal.getOutput());
-
-
 
         }
     }
