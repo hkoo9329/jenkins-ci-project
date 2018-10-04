@@ -1,5 +1,4 @@
 package com.jenkins.ci.project;
-
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -78,5 +77,4 @@ public class mainInput {
 
         return input;
     }
-
 }
